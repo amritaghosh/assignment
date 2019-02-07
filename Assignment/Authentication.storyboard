@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="eA3-zX-fwL">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Auth Delegate-->
+        <scene sceneID="f9b-I8-5CE">
+            <objects>
+                <tableViewController id="eA3-zX-fwL" customClass="LoginViewController" customModule="ETW" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="interactive" dataMode="static" style="plain" separatorStyle="none" rowHeight="64" sectionHeaderHeight="28" sectionFooterHeight="28" id="DWK-hI-tMy">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.9843137264251709" green="0.9843137264251709" blue="0.9843137264251709" alpha="1" colorSpace="calibratedRGB"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="xw6-KK-uWG">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="245"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LoginLogo" translatesAutoresizingMaskIntoConstraints="NO" id="pQy-02-VMa">
+                                    <rect key="frame" x="167.66666666666666" y="93" width="79" height="110"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="pQy-02-VMa" secondAttribute="height" multiplier="79:110" id="ng0-Le-RbV"/>
+                                    </constraints>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" red="0.98431372549019602" green="0.98431372549019602" blue="0.98431372549019602" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstItem="pQy-02-VMa" firstAttribute="centerX" secondItem="xw6-KK-uWG" secondAttribute="centerX" id="Eza-C9-uvG"/>
+                                <constraint firstItem="pQy-02-VMa" firstAttribute="height" secondItem="xw6-KK-uWG" secondAttribute="height" multiplier="0.448979" id="Jjl-Mb-5Cp"/>
+                                <constraint firstAttribute="bottom" secondItem="pQy-02-VMa" secondAttribute="bottom" constant="42" id="OqO-Sp-pqP"/>
+                            </constraints>
+                        </view>
+                        <sections>
+                            <tableViewSection id="Ap1-Q2-4QT">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="hFJ-z5-Coa" customClass="AuthenticationFieldTableViewCell" customModule="ETW" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="245" width="414" height="64"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hFJ-z5-Coa" id="F3a-Tb-em2">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="64"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xug-PW-lXB">
+                                                    <rect key="frame" x="40" y="8" width="334" height="48"/>
+                                                    <subviews>
+                                                        <textField opaque="NO" clipsSubviews="YES" tag="1001" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I2K-Mo-Uzb">
+                                                            <rect key="frame" x="16" y="0.0" width="300" height="48"/>
+                                                            <color key="textColor" red="0.3333333432674408" green="0.3490196168422699" blue="0.36078432202339172" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="18"/>
+                                                            <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                                                            <connections>
+                                                                <action selector="textFieldDidChangeCharacters:" destination="hFJ-z5-Coa" eventType="valueChanged" id="Ukv-7k-BRq"/>
+                                                                <action selector="textFieldDidChangeCharacters:" destination="hFJ-z5-Coa" eventType="editingChanged" id="xc7-Eu-Wnn"/>
+                                                                <outlet property="delegate" destination="hFJ-z5-Coa" id="18z-4m-Nm3"/>
+                                                            </connections>
+                                                        </textField>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstItem="I2K-Mo-Uzb" firstAttribute="top" secondItem="xug-PW-lXB" secondAttribute="top" id="3nx-8M-tuP"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="280" id="BUD-Sz-GyP"/>
+                                                        <constraint firstAttribute="trailing" secondItem="I2K-Mo-Uzb" secondAttribute="trailing" constant="18" id="KSi-y2-DUy"/>
+                                                        <constraint firstAttribute="width" secondItem="xug-PW-lXB" secondAttribute="height" multiplier="295:48" priority="750" id="OWe-Tz-jmh"/>
+                                                        <constraint firstAttribute="bottom" secondItem="I2K-Mo-Uzb" secondAttribute="bottom" id="Vn5-X5-PlN"/>
+                                                        <constraint firstItem="I2K-Mo-Uzb" firstAttribute="leading" secondItem="xug-PW-lXB" secondAttribute="leading" constant="16" id="f2M-5g-p26"/>
+                                                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="48" id="pp6-xS-Ggj"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.98431372549019602" green="0.98431372549019602" blue="0.98431372549019602" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstItem="xug-PW-lXB" firstAttribute="leading" relation="lessThanOrEqual" secondItem="F3a-Tb-em2" secondAttribute="leading" constant="40" id="1of-Jd-VXY"/>
+                                                <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="xug-PW-lXB" secondAttribute="trailing" constant="40" id="dgg-S8-Bri"/>
+                                                <constraint firstItem="xug-PW-lXB" firstAttribute="centerX" secondItem="F3a-Tb-em2" secondAttribute="centerX" id="gxS-c2-5dR"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="xug-PW-lXB" secondAttribute="trailing" constant="20" id="mv2-E2-DaG"/>
+                                                <constraint firstItem="xug-PW-lXB" firstAttribute="centerY" secondItem="F3a-Tb-em2" secondAttribute="centerY" id="sTi-Ph-dM0"/>
+                                                <constraint firstItem="xug-PW-lXB" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="F3a-Tb-em2" secondAttribute="leading" constant="20" id="wre-CY-CBl"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="rightViewImage" value="LoginCompanyID"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="activeOutlineColor">
+                                                <color key="value" red="0.3921568627" green="0.59607843140000005" blue="0.80784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="inactiveOutlineColor">
+                                                <color key="value" red="0.75559091567993164" green="0.75556838512420654" blue="0.75558114051818848" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="outlineBorderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="outlineCornerRadius">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="authDelegate" destination="eA3-zX-fwL" id="Xxx-bU-1gv"/>
+                                            <outlet property="textField" destination="I2K-Mo-Uzb" id="2NR-Kw-Ra6"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="gEe-Zl-Dg6" customClass="AuthenticationFieldTableViewCell" customModule="ETW" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="309" width="414" height="64"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gEe-Zl-Dg6" id="vbI-3x-5r8">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="64"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G65-fu-aYZ">
+                                                    <rect key="frame" x="40" y="8" width="334" height="48"/>
+                                                    <subviews>
+                                                        <textField opaque="NO" clipsSubviews="YES" tag="1001" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HP7-SF-GoC">
+                                                            <rect key="frame" x="16" y="0.0" width="300" height="48"/>
+                                                            <color key="textColor" red="0.3333333432674408" green="0.3490196168422699" blue="0.36078432202339172" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="18"/>
+                                                            <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                                                            <connections>
+                                                                <action selector="textFieldDidChangeCharacters:" destination="gEe-Zl-Dg6" eventType="editingChanged" id="jQk-cz-irB"/>
+                                                                <outlet property="delegate" destination="gEe-Zl-Dg6" id="8na-QG-Bqo"/>
+                                                            </connections>
+                                                        </textField>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="HP7-SF-GoC" secondAttribute="bottom" id="0jC-oY-VaJ"/>
+                                                        <constraint firstItem="HP7-SF-GoC" firstAttribute="top" secondItem="G65-fu-aYZ" secondAttribute="top" id="Let-Ju-aiV"/>
+                                                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="48" id="Myd-AR-5Lh"/>
+                                                        <constraint firstAttribute="width" secondItem="G65-fu-aYZ" secondAttribute="height" multiplier="295:48" priority="750" id="Ucf-yv-Pcb"/>
+                                                        <constraint firstItem="HP7-SF-GoC" firstAttribute="leading" secondItem="G65-fu-aYZ" secondAttribute="leading" constant="16" id="aKI-uQ-qbO"/>
+                                                        <constraint firstAttribute="trailing" secondItem="HP7-SF-GoC" secondAttribute="trailing" constant="18" id="mge-Jv-6P9"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="280" id="uIQ-2u-TAh"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.98431372549999996" green="0.98431372549999996" blue="0.98431372549999996" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstItem="G65-fu-aYZ" firstAttribute="centerX" secondItem="vbI-3x-5r8" secondAttribute="centerX" id="7i0-Wj-ihZ"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="G65-fu-aYZ" secondAttribute="trailing" constant="20" id="DMl-fy-TgK"/>
+                                                <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="G65-fu-aYZ" secondAttribute="trailing" constant="40" id="Qvb-1I-BLz"/>
+                                                <constraint firstItem="G65-fu-aYZ" firstAttribute="centerY" secondItem="vbI-3x-5r8" secondAttribute="centerY" id="XL4-Pe-1CB"/>
+                                                <constraint firstItem="G65-fu-aYZ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="vbI-3x-5r8" secondAttribute="leading" constant="20" id="Zv5-aK-bJk"/>
+                                                <constraint firstItem="G65-fu-aYZ" firstAttribute="leading" relation="lessThanOrEqual" secondItem="vbI-3x-5r8" secondAttribute="leading" constant="40" id="xC6-LX-Zq6"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="rightViewImage" value="LoginUserImagePlaceholder"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="outlineBorderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="outlineCornerRadius">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="activeOutlineColor">
+                                                <color key="value" red="0.3921568627" green="0.59607843140000005" blue="0.80784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="inactiveOutlineColor">
+                                                <color key="value" red="0.75559091567993164" green="0.75556838512420654" blue="0.75558114051818848" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="authDelegate" destination="eA3-zX-fwL" id="tx0-ff-GNz"/>
+                                            <outlet property="textField" destination="HP7-SF-GoC" id="t8w-IM-wlx"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="Fe9-pv-hqB">
+                                        <rect key="frame" x="0.0" y="373" width="414" height="64"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Fe9-pv-hqB" id="a9d-Ud-crf">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="64"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n1S-u1-J96">
+                                                    <rect key="frame" x="40" y="8" width="334" height="48"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.37647058820000001" blue="0.48627450979999998" alpha="0.65000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="48" id="aAs-c9-gk0"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="280" id="fJW-2h-buS"/>
+                                                        <constraint firstAttribute="width" secondItem="n1S-u1-J96" secondAttribute="height" multiplier="295:48" priority="750" id="y9E-i6-YjS"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="18"/>
+                                                    <state key="normal" title="SIGN IN">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="2"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="signInButtonAction:" destination="eA3-zX-fwL" eventType="touchUpInside" id="owk-oL-AmL"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.98431372549999996" green="0.98431372549999996" blue="0.98431372549999996" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstItem="n1S-u1-J96" firstAttribute="leading" relation="lessThanOrEqual" secondItem="a9d-Ud-crf" secondAttribute="leading" constant="40" id="2RL-yd-6Hm"/>
+                                                <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="n1S-u1-J96" secondAttribute="trailing" constant="40" id="D3l-mR-q7A"/>
+                                                <constraint firstItem="n1S-u1-J96" firstAttribute="centerX" secondItem="a9d-Ud-crf" secondAttribute="centerX" id="KPx-Hs-QfV"/>
+                                                <constraint firstItem="n1S-u1-J96" firstAttribute="centerY" secondItem="a9d-Ud-crf" secondAttribute="centerY" id="jpQ-Dy-kO2"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="eA3-zX-fwL" id="XHT-VC-vJM"/>
+                            <outlet property="delegate" destination="eA3-zX-fwL" id="lUH-qi-ghG"/>
+                        </connections>
+                    </tableView>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="companyIDTextField" destination="I2K-Mo-Uzb" id="ADa-gH-YXG"/>
+                        <outlet property="logoBottomConstraint" destination="OqO-Sp-pqP" id="WZQ-Hw-KJM"/>
+                        <outlet property="signInButton" destination="n1S-u1-J96" id="LGI-Qu-Y4R"/>
+                        <outlet property="usernameTextField" destination="HP7-SF-GoC" id="5wU-Am-Bup"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CkK-i0-Zv0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer numberOfTapsRequired="3" id="TCR-Mz-1la">
+                    <connections>
+                        <action selector="environmentChangeAction:" destination="eA3-zX-fwL" id="fDZ-dN-Ifd"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-68" y="-36"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="LoginCompanyID" width="18" height="19"/>
+        <image name="LoginLogo" width="79" height="110"/>
+        <image name="LoginUserImagePlaceholder" width="20" height="20"/>
+    </resources>
+</document>

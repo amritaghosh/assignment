@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:Assignment/Assignment.xcodeproj">
+   </FileRef>
+   <Group
+      location = "group:Assignment"
+      name = "Assignment">
+      <Group
+         location = "group:Assignment"
+         name = "Assignment">
+         <Group
+            location = "container:"
+            name = "Authentication">
+            <FileRef
+               location = "group:LoginViewController.swift">
+            </FileRef>
+            <FileRef
+               location = "group:AuthenticationFieldTableViewCell.swift">
+            </FileRef>
+         </Group>
+         <FileRef
+            location = "group:ViewController.swift">
+         </FileRef>
+         <Group
+            location = "group:Assets.xcassets"
+            name = "Assets.xcassets">
+            <Group
+               location = "group:AppIcon.appiconset"
+               name = "AppIcon.appiconset">
+               <FileRef
+                  location = "group:Contents.json">
+               </FileRef>
+            </Group>
+            <FileRef
+               location = "group:Contents.json">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:Base.lproj"
+            name = "Base.lproj">
+            <FileRef
+               location = "group:LaunchScreen.storyboard">
+            </FileRef>
+            <FileRef
+               location = "group:Main.storyboard">
+            </FileRef>
+         </Group>
+         <FileRef
+            location = "group:AppDelegate.swift">
+         </FileRef>
+         <FileRef
+            location = "group:Info.plist">
+         </FileRef>
+         <Group
+            location = "container:"
+            name = "NetworkingStack">
+            <FileRef
+               location = "group:DownSyncManager.swift">
+            </FileRef>
+            <FileRef
+               location = "group:NetworkManager.swift">
+            </FileRef>
+            <FileRef
+               location = "group:NetworkRetriever.swift">
+            </FileRef>
+         </Group>
+         <Group
+            location = "container:"
+            name = "Shared">
+            <FileRef
+               location = "group:Constants.swift">
+            </FileRef>
+            <FileRef
+               location = "group:SystemManager.swift">
+            </FileRef>
+         </Group>
+         <Group
+            location = "container:"
+            name = "Storyboard">
+            <FileRef
+               location = "group:Authentication.storyboard">
+            </FileRef>
+         </Group>
+      </Group>
+      <FileRef
+         location = "group:Assignment.xcodeproj">
+      </FileRef>
+      <Group
+         location = "group:AssignmentUITests"
+         name = "AssignmentUITests">
+         <FileRef
+            location = "group:AssignmentUITests.swift">
+         </FileRef>
+         <FileRef
+            location = "group:Info.plist">
+         </FileRef>
+      </Group>
+      <Group
+         location = "group:AssignmentTests"
+         name = "AssignmentTests">
+         <FileRef
+            location = "group:AssignmentTests.swift">
+         </FileRef>
+         <FileRef
+            location = "group:Info.plist">
+         </FileRef>
+      </Group>
+   </Group>
+</Workspace>
